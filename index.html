@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>制造导航</title>
+  <style>
+    .search-box {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .jd {
+      background-color: #f30213;
+      color: white;
+    }
+
+    .taobao {
+      background-color: #ff6200;
+      color: white;
+    }
+
+    .tmall {
+      background-color: #ff0036;
+      color: white;
+    }
+
+    .a1688 {
+      background-color: #ff4000;
+      color: white;
+    }
+
+    .misumi {
+      background-color: #faa005;
+      color: white;
+    }
+
+    .yhd {
+      background-color: #1db3c9;
+      color: white;
+    }
+
+    .jlcfa {
+      background-color: #0f95ec;
+      color: white;
+    }
+
+    .sl {
+      background-color: #1581f0;
+      color: white;
+    }
+
+    .lcsc {
+      background-color: #0094e7;
+      color: white;
+    }
+
+    .jdyqj {
+      background-color: #0d47a0;
+      color: white;
+    }
+
+    .tkte {
+      background-color: #e98300;
+      color: white;
+    }
+
+    .bdxx {
+      background-color: #3366cc;
+      color: white;
+    }
+
+    .jdgph {
+      background-color: #f00d03;
+      color: white;
+    }
+
+    .jdwjc {
+      background-color: #f00d03;
+      color: white;
+    }
+
+    .yjt {
+      background-color: #00165a;
+      color: white;
+    }
+
+    .hzw {
+      background-color: #00aaff;
+      color: white;
+    }
+
+    .tmw {
+      background-color: #d4141b;
+      color: white;
+    }
+
+    .hmd {
+      background-color: #1cbfda;
+      color: white;
+    }
+
+    .wdwwj {
+      background-color: #c09a47;
+      color: white;
+    }
+
+    .hfm {
+      background-color: #ff7000;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function search(platform, keyword) {
+      // 这里只是模拟跳转到搜索页面，实际开发中需要根据平台的API或搜索链接格式进行跳转  
+      // 注意：以下URL只是示例，并非真实的搜索URL  
+      const baseUrl = {
+        京东: 'https://search.jd.com/Search?keyword=',
+        淘宝: 'https://s.taobao.com/search?q=',
+        天猫: 'https://s.taobao.com/search?&tab=mall&q=',
+        1688: 'https://s.1688.com/selloffer/offer_search.htm?keywords=',
+        米思米: 'https://www.misumi.com.cn/vona2/result/?Keyword=',
+        嘉立创FA: 'https://www.jlcfa.com/product/search/1723184984714?keyWord=',
+        怡合达: 'https://www.yhdfa.com/product/search/',
+        上隆: 'https://www.sl-fa.com/search/',
+        易紧通: 'https://www.164580.com/biaozhun/?keyword=',
+        华轴网: 'https://www.zcwz.com/search/?wd=',
+        河姆渡: 'https://b2b.homedo.com/search/list.html?searchKey=',
+        土猫网: 'https://www.toolmall.com/product/search?keyword=',
+        我的万物集: 'https://www.mymro.cn/search.html?keyword=',
+        霍夫曼: 'https://www.hoffmann-group.com.cn/search.php?encode=',
+        半导小芯: 'https://www.semiee.com/search?searchModel=',
+        立创商城: 'https://so.szlcsc.com/global.html?k=',
+        泰科TE: 'https://www.te.com.cn/chn-zh/search.html?q=',
+        京东工品汇: 'https://www.vipmro.com/ss?keyword=',
+        京东元器件: 'https://ic-search.jd.com/Search?enc=utf-8&keyword=',
+        京东五金城: 'https://i-search.jd.com/Search?enc=utf-8&keyword='
+      };
+
+      if (baseUrl[platform]) {
+        window.open(baseUrl[platform] + encodeURIComponent(keyword), '_blank');
+      } else {
+        alert('不支持的平台');
+      }
+    }  
+  </script>
+  <table width="1280" cellspacing="0" cellpadding="0" border="1" align="center">
+    <tbody>
+      <tr>
+        <td rowspan="1" colspan="3" height="50" valign="middle" align="center">
+          <font size="+2"><b>商品搜索</b></font><br>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="1" colspan="3" height="50" width="200" valign="middle" align="center">
+          <div class="search-box"> <input id="searchKeyword" placeholder="输入搜索关键词..." type="text">
+            <button class="jd" onclick="search('京东',
+          document.getElementById('searchKeyword').value)"><b>京东</b></button>
+            <b>|</b>
+            <button class="taobao" onclick="search('淘宝',
+          document.getElementById('searchKeyword').value)"><b>淘宝</b></button>
+            <b>|</b>
+            <button class="tmall" onclick="search('天猫',
+          document.getElementById('searchKeyword').value)"><b>天猫</b></button>
+            <b>|</b>
+            <button class="a1688" onclick="search('1688',
+          document.getElementById('searchKeyword').value)"><b>1688</b></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="1" colspan="3" height="50" width="200" valign="middle" align="center">
+          <div class="search-box"><b>工业品综合商城：</b>
+            <button class="misumi" onclick="search('米思米',
+          document.getElementById('searchKeyword').value)"><b>米思米</b></button>
+            <b>|</b>
+            <button class="jlcfa" onclick="search('嘉立创FA',
+          document.getElementById('searchKeyword').value)"><b>嘉立创FA</b></button>
+            <b>|</b>
+            <button class="yhd" onclick="search('怡合达',
+          document.getElementById('searchKeyword').value)"><b>怡合达</b></button>
+            <b>|</b>
+            <button class="sl" onclick="search('上隆',
+          document.getElementById('searchKeyword').value)"><b>上隆</b></button>
+            <b>|</b>
+            <button class="jdgph" onclick="search('京东工品汇',
+          document.getElementById('searchKeyword').value)"><b>京东工品汇</b></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="1" colspan="3" height="50" width="200" valign="middle" align="center">
+          <div class="search-box"><b>专品商城：</b>
+            <button class="jdwjc" onclick="search('京东五金城',
+          document.getElementById('searchKeyword').value)"><b>京东五金城</b></button>
+            <b>|</b>
+            <button class="yjt" onclick="search('易紧通',
+          document.getElementById('searchKeyword').value)"><b>易紧通</b></button>
+            <b>|</b>
+            <button class="hzw" onclick="search('华轴网',
+          document.getElementById('searchKeyword').value)"><b>华轴网</b></button>
+            <b>|</b>
+            <button class="tmw" onclick="search('土猫网',
+          document.getElementById('searchKeyword').value)"><b>土猫网</b></button>
+            <b>|</b>
+            <button class="hmd" onclick="search('河姆渡',
+          document.getElementById('searchKeyword').value)"><b>河姆渡</b></button>
+            <b>|</b>
+            <button class="wdwwj" onclick="search('我的万物集',
+        document.getElementById('searchKeyword').value)"><b>我的万物集</b></button>
+            <b>|</b>
+            <button class="hfm" onclick="search('霍夫曼',
+      document.getElementById('searchKeyword').value)"><b>霍夫曼</b></button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="1" colspan="3" height="50" width="200" valign="middle" align="center">
+          <div class="search-box"><b>电子电气：</b>
+            <button class="lcsc" onclick="search('立创商城',
+          document.getElementById('searchKeyword').value)"><b>立创商城</b></button>
+            <b>|</b>
+            <button class="jdyqj" onclick="search('京东元器件',
+          document.getElementById('searchKeyword').value)"><b>京东元器件</b></button>
+            <b>|</b>
+            <button class="tkte" onclick="search('泰科TE',
+          document.getElementById('searchKeyword').value)"><b>泰克TE</b></button>
+            <b>|</b>
+            <button class="bdxx" onclick="search('半导小芯',
+          document.getElementById('searchKeyword').value)"><b>半导小芯</b></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</body>
+
+</html>
